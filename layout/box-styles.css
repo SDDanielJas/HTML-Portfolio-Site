@@ -1,0 +1,20 @@
+@charset "UTF-8";
+h1 {
+	border: red 1px solid;
+	background-color: #D18C1D;
+	padding: 10px;
+}
+li {
+	margin: 15px; 
+	background-color: #C0A9DB;
+}
+p{ 
+width: 600px;
+height: 400px;
+border: black 2px dotted;
+background-color: #D1D631
+}
+a{ 
+border-bottom: blue 3px dashed; 
+background-color: #A1A1A1
+}

@@ -1,0 +1,39 @@
+body {
+background: linear-gradient(54deg, rgb(133,187,101),rgb(212,175,55) ); 
+	font-size: 25px;
+	text-align: center;
+	
+}	
+.cardgame {
+  height: 200px;
+  perspective: 800;
+  position: relative;
+  width: 200px;
+	
+
+}
+.fullcard {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 2s ease-out;
+  width: 100%;
+	line-height: 150px;
+}
+.fullcard:hover {
+	transition-delay: 1s;
+  transform: rotateX(180deg);
+}
+.fullcard .frontside {
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.fullcard .backside {
+	text-align: center;
+	color: rgb(255,255,255);
+	font-size: 90px;
+  transform:  rotateX(180deg);
+}

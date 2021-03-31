@@ -1,0 +1,56 @@
+body {
+margin: 0 15%;
+background: linear-gradient(54deg, rgb(3,65,252),rgb(245, 71, 71) );
+color: rgb(255, 255, 255);
+font: 1.5em/1.5em cursive; 
+		
+	}	
+header {
+text-align: center;
+color: rgb(0, 0, 0);
+background: linear-gradient(54deg, rgb(245, 71, 71),rgb(3,65,252));
+font: 2em/1em magneto; 
+}
+main {
+background: linear-gradient(54deg, rgb(245, 71, 71),rgb(3,65,252), rgb(103, 62, 168), rgb(105, 89, 89));
+font-size: 1em;
+color: rgb(255, 255, 255);
+}
+footer{
+	background:rgb(3,65,252);  
+	font-size: .5em;
+	color: rgb(0,0,0);
+}
+main dt {
+	font-family: sans-serif;
+}
+main dd {
+	font-family: sans-serif;
+}
+ main > h2 {
+	font-family: monospace;
+}
+a {
+  text-decoration: underline;
+	color: rgb(0,0,0);
+	
+}
+a:visited {
+	color: rgb(255,0,0) ;
+}
+a:focus, a:hover {
+	text-decoration: none;
+	color: rgb(221,0,255);
+	background-color: rgb(255, 255, 255);
+}
+a:active {
+	color: rgb(221,0,255);
+	background-color: rgb(255, 255, 255);
+}
+h1 {
+	font-family: magneto, sans-serif;
+}
+body blockquote {
+	color: black;
+}
+

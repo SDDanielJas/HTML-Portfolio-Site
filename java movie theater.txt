@@ -1,0 +1,128 @@
+class EmployeePerson {
+
+	protected String fullName; // Format: last name, first name
+	protected String departmentCode;
+	protected String birthday;
+	protected int annualSalary;
+
+	// ***********************************************************************
+
+	// Default constructor. Set protected variables to the empty string or 0
+	public EmployeePerson() {
+		fullName = "";
+		departmentCode = "";
+		birthday = "";
+		annualSalary = 0;
+	}
+
+	// ***********************************************************************
+
+	// Constructor with parameters to set the private variables
+	public EmployeePerson(String empFullName, String empDepartmentCode, String empBirthday, int empAnnualSalary) {
+		setData(empFullName, empDepartmentCode, empBirthday, empAnnualSalary);
+	}
+
+	// ***********************************************************************
+
+	public void setData(String empFullName, String empDepartmentCode, String empBirthday, int empAnnualSalary) {
+		fullName = empFullName;
+		departmentCode = empDepartmentCode;
+		birthday = empBirthday;
+		annualSalary = empAnnualSalary;
+	}
+
+	// ***********************************************************************
+
+	public void printInfo() {
+		System.out.print("Name: " + fullName + ", Department: " + departmentCode + ", Birthday: " + birthday
+				+ ", Salary: " + annualSalary);
+	}
+}
+
+class EmployeeManager extends EmployeePerson {
+
+	private int numManaged; // Number of staff managed
+
+	// ***********************************************************************
+
+	// Default constructor
+	public EmployeeManager() {
+		numManaged = 0;
+	}
+
+	// ***********************************************************************
+
+	// Constructor with parameters
+	public EmployeeManager(int nManaged) {
+		numManaged = nManaged;
+	}
+
+	// ***********************************************************************
+
+	// Get the number of people managed
+	public int getNumManaged() {
+		return numManaged;
+	}
+
+	// ***********************************************************************
+
+	@Override
+	public void printInfo() {
+		System.out.print("Name: " + fullName + ", Department: " + departmentCode + ", Birthday: " + birthday
+				+ ", Salary: " + annualSalary);
+		System.out.println(", Staff managed: " + getNumManaged());
+	}
+}
+
+class EmployeeStaff extends EmployeePerson {
+
+	private String managerName;
+
+	// ***********************************************************************
+
+	// Default constructor
+	public EmployeeStaff() {
+		managerName = "";
+	}
+
+	// ***********************************************************************
+
+	// Constructor with parameters
+	public EmployeeStaff(String reportsTo) {
+		managerName = reportsTo;
+	}
+
+	// ***********************************************************************
+
+	// Get the name of the manager
+	public String getManagerName() {
+		return managerName;
+	}
+
+	// ***********************************************************************
+
+	@Override
+	public void printInfo() {
+		System.out.print("Name: " + fullName + ", Department: " + departmentCode + ", Birthday: " + birthday
+				+ ", Salary: " + annualSalary);
+		System.out.println(", Manager: " + getManagerName());
+	}
+}
+class Main {
+
+	public static void main(String[] args) {
+
+		// Create the objects
+		EmployeeManager manager = new EmployeeManager(25);
+		EmployeeStaff staff1 = new EmployeeStaff("Michele");
+
+		// Load data into the objects using the Person class' method
+		manager.setData("Michele", "Sales", "03-03-1975", 70000);
+		staff1.setData("Bob", "Sales", "02-02-1980", 50000);
+
+		// Print the objects
+		manager.printInfo();
+		staff1.printInfo();
+	}
+}
+
